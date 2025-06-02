@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이수광 디지털 명함</title>
+    
+    <link rel="stylesheet" href="css/reset.css" />
+<style>
+/* header */
+header {position: fixed;top: 0;left: 0;width: 100%;height: 60px;z-index: 100;background-color: rgba(255, 255, 255, 0.5);}
+
+header>.container {width: 1200px;margin: 0 auto;}
+
+header>.container>nav {height: 60px;display: flex;align-items: center;justify-content: space-between;}
+
+header>.container>nav>.gnb>li{float:left; width:200px;}
+header>.container>nav>.gnb>li>a{display:block; height:60px; line-height:60px; font-size:20px; font-weight:700; text-align:center; transition:all 0.4s;}
+header>.container>nav>.gnb>li:hover>a,header>.container>nav>.gnb>li>a:focus,header>.container>nav>.gnb>li.on>a{color:#425a73; }
+
+/* footer */
+footer{width:100%; height:100px; background-color:#425a73;}
+footer>address{padding-top:30px; font-size:14px; font-weight:300; color:#fff; line-height:1.6; text-align:center;}
+</style>
+</head>
+<body>
+<div id="wrap">
+    <header>
+      <div class="container">
+        <h2 class="sr-only">이수광 포트폴리오 메뉴</h2>
+
+        <nav>
+          <ul class="gnb clearfix">
+            <li class="on"><a href="#">HOME</a></li>
+            <li><a href="section(2)">WHO AM I</a></li>
+            <li><a href="#">STEPS</a></li>
+            <li><a href="#">LEARNING LOG</a></li>
+            <li><a href="#">DESIGN</a></li>
+            <li><a href="#">CONTACT</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+<hr>
+<section>
+
+</section>
+
+    <hr>
+<footer>
+      <address>
+        본 페이지는 상업적 목적이 아닌 개인 포트폴리오용으로 제작되었습니다.<br>
+        &copy; 2025 Lee, Su-Kwang. All Rights Reserved.
+      </address>
+    </footer>
+
+</body>
+</html>
