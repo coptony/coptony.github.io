@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=0.8">
+    <meta charset="UTF-8">
+    <title>뷰포트를 설정하지 않은 경우</title>
 <style>
 * {
     box-sizing: border-box;
@@ -10,8 +11,7 @@ body {
     font-family: Arial;
     padding:10px;
     background: #f1f1f1;
-}
-
+}  
 /* Header/Blog Title */
 .header {
     padding: 30px;
@@ -43,70 +43,16 @@ body {
     background-color: #ddd;
     color:black;
 }
-
-/* Create two unequal columns that next to each other */
-/* Left column */
-.leftcolumn {
-    float:left;
-    width:75%;
-}
-
-/* Right column */
-.rightcolumn {
-    float: left;
-    width:25%;
-    background-color: #f1f1f1;
-    padding-left: 20px;
-}
-
-/* Fake image */
-.fakeimg {
-    background-color: #aaa;
-    width: 100%;
-    padding:20px;
-}
-
-/* Add a card effect for articles */
-.card {
-    background-color: white;
-    padding: 20px;
-    margin-top: 20px;
-}
-
-/* Clear floats after the columns */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-/* Footer */
-.footer {
-    padding: 20px;
-    text-align: center;
-    background: #ddd;
-    margin-top: 20px;
-}
-
-/* Responsive layout - when the screen is less than 800px wide, make the two column */
-@media screen and (max-width: 800px) {
-    .leftcolumn, .rightcolumn {
-        width: 100%;
-        padding: 0;
-    }
-}
-
 /* Responsive layout - when the screen is less than 400px wide, make the navigation */
 @media screen and (max-width: 400px) {
     .topnav a {
         float: none;
         width: 100%;
     }
-}
-</style>
+}  
+</style>    
 </head>
 <body>
-    
 <div class="header">
   <h1>My Website</h1>
   <p>Resize the browser window to see the effect.</p>
@@ -124,46 +70,11 @@ body {
   <a href="#" style="float:right">Link</a>
 </div>
 
-<div class="row">
-  <div class="leftcolumn">
-    <div class="card">
-        <h2>TITLE HEADING</h2>
-        <h5>Title description, Dec 7, 2017</h5>
-        <div class="fakeimg" style="height:200px;">Image</div>
-        <p>Some text..</p>
-        <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur</p>
-    </div>
-    <div class="card">
-        <h2>TITLE HEADING</h2>
-        <h5>Title description, Dec 7, 2017</h5>
-        <div class="fakeimg" style="height:200px;">Image</div>
-        <p>Some text..</p>
-        <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur</p>
-    </div>
-  </div>
-  <div class="rightcolumn">
-    <div class="card">
-      <h2>About Me</h2>
-      <div class="fakeimg" style="height:100px;">Image</div>
-      <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
-    </div>
-    <div class="card">
-      <h3>Popular Post</h3>
-      <div class="fakeimg"><p>Image</p></div>
-      <div class="fakeimg"><p>Image</p></div>
-      <div class="fakeimg"><p>Image</p></div>
-    </div>
-    <div class="card">
-        <h3>Follow Me</h3>
-        <p>Some text..</p>
-    </div>
-  </div>
-</div>
-
-<div class="footer">
-    <h2>Footer</h2>
-</div>
-
-
+  <img src="https://search.pstatic.net/sunny/?src=https%3A%2F%2Fpng.pngtree.com%2Fpng-vector%2F20210903%2Fourlarge%2Fpngtree-mount-cook-meadow-scenery-png-image_3859735.jpg&type=a340" width="450">
+  <h2>속초 대포항</h2>
+  <p> 예전에는 배를 댈 공간이 없을 정도로 항구에 어선이 많았고 새벽에 고기를 잡아 돌아온 어선으로 북적였다.
+    항구로 들어오는 진입로 양옆에는 건어물 가게와 횟집이 늘어서 있고, 어판장 쪽에는 활어 난전이 형성되어 있었다.
+    요즘은 동해 고속도로가 개통되어 현대적인 시설의 호텔과 콘도, 깔끔한 횟집이 많이 들어섰다.
+  </p>
 </body>
 </html>
