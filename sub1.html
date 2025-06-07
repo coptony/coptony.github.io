@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,500,700&display=swap" rel="stylesheet">
+  <title>나의 취향</title>
+  <style>
+/* ----------------------------------------------------------------------------------------------------------------------- */
+* {box-sizing: border-box;}
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  color: #2b2b2b;
+  background-color: #F7EBDD;
+  margin: 0;
+  padding:10px;
+}
+address,em{font-style:normal; font-weight:400;}
+#wrap {
+  width: 100%;
+}
+
+::selection {
+  background-color: #bbdcfb;
+}
+
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+}
+
+header > .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+nav > ul.gnb {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+nav > ul.gnb > li {
+  list-style: none;
+  flex: 1 1 16.66%;
+  min-width: 150px;
+  text-align: center;
+}
+
+nav > ul.gnb > li > a {
+  display: block;
+  height: 60px;
+  line-height: 60px;
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #000;
+  transition: all 0.3s ease;
+}
+
+nav > ul.gnb > li:hover > a,
+nav > ul.gnb > li.on > a {
+  color: #425a73;
+}
+/* footer */
+footer{width:100%; height:100px; background-color:#425a73;}
+footer>address{padding-top:30px; font-size:14px; font-weight:300; color:#fff; line-height:1.6; text-align:center;}
+/* ------------------------------------------------------------------------------------------------------------------------------------- */
+.leftcolumn {
+    float:left;
+    width:50%;
+}
+
+/* Right column */
+.rightcolumn {
+    float: left;
+    width:50%;
+    padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+    background-color: #FfaFaC;
+    width: 100%;
+    padding:20px;
+}
+
+/* Add a card effect for articles */
+.card {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Footer */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+    margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two column */
+@media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {
+        width: 100%;
+        padding: 0;
+    }
+}
+/* Responsive Navigation */
+@media (max-width: 1200px) {
+  nav > ul.gnb > li {
+    flex: 1 1 33.33%;
+  }
+  #home h1 {
+    font-size: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  nav > ul.gnb > li {
+    flex: 1 1 50%;
+  }
+  #home h1 {
+    font-size: 70px;
+  }
+}
+#titl{
+  text-align:center;
+  font-weight:400;
+  font-size: 50px;
+  margin-top: 160px;
+}
+.fakeimg p {font-size: 20px; }
+.c1 {
+  width:90%;
+  float:left;
+}
+.fakeimg > audio{float:right; position: relative; bottom:60px;}
+.rightcolumn > .fakeimg > p {float:left;}
+.clear {clear:both;}
+  </style>
+</head>
+<body>
+<h1 id="titl">MY TASTE</h1>
+<div id="wrap">
+    <header>
+      <div class="container">
+        <nav>
+          <ul class="gnb clearfix">
+            <li class="on"><a href="index.html">HOME</a></li>
+            <li><a href="#whoami">WHO AM I</a></li>
+            <li><a href="#contact">LET'S TALK</a></li>    
+            <li><a href="sub1.html">MY TASTE</a></li>
+            <li><a href="sub2.html">LEARNING LOG</a></li>
+            <li><a href="sub3.html">MY JOURNEY</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <hr>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+        <h2>TRAVEL</h2>
+        <h5>스노클링 러버</h5>
+        <div class="fakeimg" style="height:200px; background-image: url(images/sno.jpg); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
+        <p>저는 스노클링을 러버입니다..</p>
+        <p>최근에 피리핀 보홀 여행을 다녀왔는데요! 그때 바다거북과 함께 바다를 유영했는데 정말 꿈같고 그 순간이 잊혀지지 않습니다ㅎㅎ</p>
+    </div>
+    <div class="card">
+        <h2>YECA</h2>
+        <h5>예카</h5>
+        <div class="fakeimg" style="height:200px; background-image: url(images/nohong.jpg); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
+        <p>'예쁜 카페' 줄여서 '예카'라고 부르죠.</p>
+        <p>평소 디저트와 맛있는 커피 먹는 것을 좋아해서 방방곡곡 예카들을 찾아다니곤 하는데요, 사진은 최근에 해방촌에서 들렀던 '홍철책방'이라는 곳입니다.
+          연예인 노홍철씨의 엄청난 자기애가 느껴지던 곳이었는데 한번 가보시는 것, 추천합니다!
+        </p>
+    </div>
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>TENNYEONJIGI</h2>
+      <div class="fakeimg" style="height:200px; background-image: url(images/midfriend.jpg); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
+      <p>제가 정말 사랑하는 10년지기 중학교 친구들입니다. 한 넘이 눈을 감고있긴 한데,, 참 잘 나왔죠?</p>
+    </div>
+    <div class="card c1" style="border-radius: 20px;">
+      <h3>Favorite Music</h3>
+      <div class="fakeimg"><p>Not Angry - Chris James</p><audio src="audios/notangry.mp3" controls></audio></div>
+      <div class="fakeimg"><p>Make The Move - Chris James</p><audio src="audios/makethemove.mp3" controls></audio></div>
+      <div class="fakeimg"><p>Changes - Lauv </p><audio src="audios/changes.mp3" controls></audio></div>
+    </div>
+    
+  </div>
+</div>
+
+    <hr>
+ <footer>
+      <address>
+        본 페이지는 상업적 목적이 아닌 개인 포트폴리오용으로 제작되었습니다.<br>
+        &copy; 2025 Lee, Su-Kwang. All Rights Reserved.
+      </address>
+    </footer>
+  </div>
+</div>
+</body>
+</html>

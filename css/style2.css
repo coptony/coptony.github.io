@@ -1,0 +1,129 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,500,700&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  color: #2b2b2b;
+  background-color: #F7EBDD;
+  margin: 0;
+}
+
+#wrap {
+  width: 100%;
+}
+
+::selection {
+  background-color: #bbdcfb;
+}
+
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+}
+
+header > .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+nav > ul.gnb {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+nav > ul.gnb > li {
+  list-style: none;
+  flex: 1 1 16.66%;
+  min-width: 150px;
+  text-align: center;
+}
+
+nav > ul.gnb > li > a {
+  display: block;
+  height: 60px;
+  line-height: 60px;
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #000;
+  transition: all 0.3s ease;
+}
+
+/* nav > ul.gnb > li:hover > a,
+nav > ul.gnb > li.on > a {
+  color: #425a73;
+} */
+
+/* Section - Home */
+#home {
+  width: 100%;
+  height: 100vh;
+  background: url(../images/main_banner.jpg) no-repeat center/cover;
+  position: relative;
+  padding-top: 120px;
+  box-sizing: border-box;
+}
+
+#home .container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+#home p:first-of-type {
+  font-weight: 300;
+  letter-spacing: 2px;
+  position: absolute;
+  top: 110px;
+  left: 60px;
+  margin: 0;
+}
+
+#home p:nth-of-type(2) {
+  position: absolute;
+  right: 60px;
+  top: 110px;
+  transform: rotate(90deg);
+  font-weight: 300;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+#home h1 {
+  font-size: 160px;
+  font-weight: 700;
+  color: #425a73;
+  letter-spacing: -3px;
+  line-height: 1;
+  position: absolute;
+  bottom: 120px;
+  left: 60px;
+  margin: 0;
+}
+
+/* Responsive Navigation */
+@media (max-width: 1200px) {
+  nav > ul.gnb > li {
+    flex: 1 1 33.33%;
+  }
+}
+
+@media (max-width: 768px) {
+  nav > ul.gnb > li {
+    flex: 1 1 50%;
+  }
+}

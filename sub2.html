@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,500,700&display=swap" rel="stylesheet">
+  <title>나의 취향</title>
+  <style>
+/* ----------------------------------------------------------------------------------------------------------------------- */
+* {box-sizing: border-box;}
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  color: #2b2b2b;
+  background-color: #F7EBDD;
+  margin: 0;
+  padding:10px;
+}
+address,em{font-style:normal; font-weight:400;}
+#wrap {
+  width: 100%;
+}
+
+::selection {
+  background-color: #bbdcfb;
+}
+
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+}
+
+header > .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+nav > ul.gnb {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+nav > ul.gnb > li {
+  list-style: none;
+  flex: 1 1 16.66%;
+  min-width: 150px;
+  text-align: center;
+}
+
+nav > ul.gnb > li > a {
+  display: block;
+  height: 60px;
+  line-height: 60px;
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #000;
+  transition: all 0.3s ease;
+}
+
+nav > ul.gnb > li:hover > a,
+nav > ul.gnb > li.on > a {
+  color: #425a73;
+}
+/* footer */
+footer{width:100%; height:100px; background-color:#425a73;}
+footer>address{padding-top:30px; font-size:14px; font-weight:300; color:#fff; line-height:1.6; text-align:center;}
+/* ------------------------------------------------------------------------------------------------------------------------------------- */
+.leftcolumn {
+    float:left;
+    width:75%;
+}
+
+/* Right column */
+.rightcolumn {
+    float: right;
+    width:75%;
+    text-align: right;
+    padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding:20px;
+}
+
+/* Add a card effect for articles */
+.card {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Footer */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+    margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two column */
+@media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {
+        width: 100%;
+        padding: 0;
+    }
+}
+/* Responsive Navigation */
+@media (max-width: 1200px) {
+  nav > ul.gnb > li {
+    flex: 1 1 33.33%;
+  }
+  #home h1 {
+    font-size: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  nav > ul.gnb > li {
+    flex: 1 1 50%;
+  }
+  #home h1 {
+    font-size: 70px;
+  }
+}
+#titl{
+  text-align:center;
+  font-weight:400;
+  font-size: 50px;
+  margin-top: 160px;
+}
+  </style>
+</head>
+<body>
+<h1 id="titl">LEARNING LOG</h1>
+<div id="wrap">
+    <header>
+      <div class="container">
+        <nav>
+          <ul class="gnb clearfix">
+            <li class="on"><a href="index.html">HOME</a></li>
+            <li><a href="#whoami">WHO AM I</a></li>
+            <li><a href="#contact">LET'S TALK</a></li>    
+            <li><a href="sub1.html">MY TASTE</a></li>
+            <li><a href="sub2.html">LEARNING LOG</a></li>
+            <li><a href="sub3.html">MY JOURNEY</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <hr>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+        <h2>DATA SRUCTURE</h2>
+        <h5>May 8, 2025</h5>
+        <div class="fakeimg" style="height:200px; background-image: url(images/datastructure.png); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
+        <p>해시 함수</p>
+        <p>자료구조 시간에 시간 복잡도와 관련해 n제곱 복잡도 정렬인 버블정렬, 선택정렬, 삽입정렬을 배우고 nlogn인 퀵정렬, 병합정렬을 살펴본 다음 넘어와서 배운 해시함수에 대해 복습하면 정리했다...
+          <br><a href="#">노션 링크</a>
+        </p>
+    </div>
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+        <h2>LINUX</h2>
+        <h5>May 21, 2025</h5>
+        <div class="fakeimg" style="height:200px; background-image: url(images/linux.png); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
+        <p>리눅스 htop 페키지 설치 실행</p>
+        <p>수업 시간에 배운 top 명령에 대해 학습하고 top 명령과 유사한 htop 명령(우측화면)을 사용하고자 페키지 설치를 진행했다.htop 명령을 실행시켜, 캡처한 사진이다 <br><a href="#">노션 링크</a></p>
+    </div>
+  </div>
+  <div class="leftcolumn">
+    <div class="card">
+        <h2>WEB PROGRAMMING</h2>
+        <h5>June 8, 2025</h5>
+        <div class="fakeimg" style="height:200px; background-image: url(images/webprogramming.png); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
+        <p>외부 스타일시트 활용</p>
+        <p>수업시간에 학습할 때 인라인, 내부, 외부 스타일시트 적용방법을 다 배웠지만 실제로 수업에서 활용한 것들은 대부분 외부 스타일 시트였다. 따라서 외부 스타일 시트를 이용한 html 문서가 깔끔해진다는 장점을 활용해서 final 페이지 만들기를 진행했다. 페이지를 만들면서 직면했던 여러가지고 고충과 고민들 그리고 그것을 해결한 방법을 아래 링크에 정리했다. <br><a href="#">노션 링크</a></p>
+    </div>
+  </div>
+</div>
+
+    <hr>
+ <footer>
+      <address>
+        본 페이지는 상업적 목적이 아닌 개인 포트폴리오용으로 제작되었습니다.<br>
+        &copy; 2025 Lee, Su-Kwang. All Rights Reserved.
+      </address>
+    </footer>
+  </div>
+</div>
+</body>
+</html>
