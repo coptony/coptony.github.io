@@ -321,7 +321,7 @@ body.menu-open .menu-toggle span:last-child {
 
 body.is-scrolled .hero-actions {
   max-height: 70px;
-  margin-top: 32px;
+  margin-top: 24px;
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
@@ -377,7 +377,7 @@ body.is-scrolled .hero-actions {
 .hero-meta {
   position: absolute;
   left: 0;
-  bottom: 74px;
+  bottom: 24px;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 14px;

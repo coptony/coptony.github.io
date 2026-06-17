@@ -14,27 +14,51 @@ const getHeaderHeight = () => {
   return header.offsetHeight || 72;
 };
 
+const setActiveNav = () => {
+  const scrollPoint = window.scrollY + getHeaderHeight() + window.innerHeight * 0.22;
+
+  let currentId = 'top';
+
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop;
+    const sectionBottom = sectionTop + section.offsetHeight;
+
+    if (scrollPoint >= sectionTop && scrollPoint < sectionBottom) {
+      currentId = section.getAttribute('id');
+    }
+  });
+
+  navLinks.forEach((link) => {
+    link.classList.toggle(
+      'active',
+      link.getAttribute('href') === `#${currentId}`
+    );
+  });
+};
+
 const setScrollState = () => {
   const scrollY = window.scrollY;
 
-  if (!header) return;
-
-  if (scrollY > 24) {
-    header.classList.add('scrolled');
-    body.classList.add('is-scrolled');
-  } else {
-    header.classList.remove('scrolled');
-    body.classList.remove('is-scrolled');
+  if (header) {
+    if (scrollY > 24) {
+      header.classList.add('scrolled');
+      body.classList.add('is-scrolled');
+    } else {
+      header.classList.remove('scrolled');
+      body.classList.remove('is-scrolled');
+    }
   }
 
   if (heroText && window.innerWidth > 768) {
-    heroText.style.transform = `translateY(${scrollY * 0.045}px)`;
+    heroText.style.transform = `translateY(${scrollY * 0.025}px)`;
   } else if (heroText) {
     heroText.style.transform = 'translateY(0)';
   }
+
+  setActiveNav();
 };
 
-const smoothScrollTo = (targetY, duration = 900) => {
+const smoothScrollTo = (targetY, duration = 950) => {
   if (prefersReducedMotion) {
     window.scrollTo(0, targetY);
     return;
@@ -85,36 +109,10 @@ hashLinks.forEach((link) => {
     const targetY =
       targetId === '#top'
         ? 0
-        : targetSection.getBoundingClientRect().top + window.scrollY - headerHeight + 1;
+        : targetSection.offsetTop - headerHeight + 1;
 
     smoothScrollTo(targetY, 950);
   });
-});
-
-const sectionObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) return;
-
-      const currentId = entry.target.getAttribute('id');
-
-      navLinks.forEach((link) => {
-        link.classList.toggle(
-          'active',
-          link.getAttribute('href') === `#${currentId}`
-        );
-      });
-    });
-  },
-  {
-    root: null,
-    threshold: 0.38,
-    rootMargin: '-20% 0px -45% 0px',
-  }
-);
-
-sections.forEach((section) => {
-  sectionObserver.observe(section);
 });
 
 const revealObserver = new IntersectionObserver(
