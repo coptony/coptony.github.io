@@ -6,102 +6,107 @@
 
   <title>이수광 | Node.js Backend Portfolio</title>
 
-  <meta name="description" content="Node.js 백엔드 개발자를 목표로 성장 중인 이수광의 포트폴리오입니다. 프로젝트, 기술 스택, 학습 기록을 정리했습니다." />
-  <meta name="keywords" content="이수광, CopTony, Node.js, Backend, Portfolio, UMC, JavaScript, TypeScript, Prisma, AWS" />
+  <meta name="description" content="Node.js 백엔드 개발자를 목표로 성장 중인 이수광의 포트폴리오입니다." />
   <meta name="author" content="Lee Su-Kwang" />
 
   <link rel="stylesheet" href="css/reset.css" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css?v=20260618-hero" />
+
+  <script src="js/main.js?v=20260618-hero" defer></script>
 </head>
 
 <body>
   <div id="wrap">
     <header class="site-header">
       <div class="header-inner">
-        <a class="logo" href="#home" aria-label="홈으로 이동">
+        <a href="#top" class="logo" aria-label="홈으로 이동">
           <span class="logo-mark">CT</span>
-          <span>CopTony</span>
+          <span class="logo-text">CopTony</span>
         </a>
+
+        <button class="menu-toggle" type="button" aria-label="메뉴 열기">
+          <span></span>
+          <span></span>
+        </button>
 
         <nav class="site-nav" aria-label="주요 메뉴">
           <ul class="gnb">
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#skills">Stack</a></li>
-            <li><a href="#learning">Learning</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#top" class="nav-link active">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#skills" class="nav-link">Stack</a></li>
+            <li><a href="#learning" class="nav-link">Learning</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
           </ul>
         </nav>
       </div>
     </header>
 
     <main>
-      <section id="home" class="hero section">
-        <div class="section-inner hero-grid">
-          <div class="hero-copy">
-            <p class="eyebrow">UMC DEMODAY PORTFOLIO · NODE.JS BACKEND</p>
+      <section id="top" class="hero">
+        <div class="hero-dim"></div>
+
+        <div class="hero-copy-top">
+          <p>RECORDING LEE SUKWANG</p>
+          <p>PORTFOLIO<br />VOL.2</p>
+        </div>
+
+        <div class="hero-inner">
+          <div class="hero-text reveal">
+            <p class="eyebrow">UMC 10TH · NODE.JS BACKEND</p>
 
             <h1>
-              기록하고 구조화하며<br />
-              서비스 백엔드를 만듭니다.
+              <span>BACKEND</span>
+              <span>DEVELOPER</span>
             </h1>
 
             <p class="hero-desc">
-              안녕하세요. 가천대학교 컴퓨터공학과 이수광입니다.
-              프로젝트 경험과 전공 학습을 바탕으로 Node.js 백엔드 개발자로 성장하고 있습니다.
+              기록하고 구조화하며, 서비스 백엔드를 만들어가는
+              컴퓨터공학과 이수광입니다.
             </p>
 
             <div class="hero-actions">
-              <a class="btn primary" href="#projects">프로젝트 보기</a>
-              <a class="btn secondary" href="#skills">기술 스택 보기</a>
+              <a href="#projects" class="btn primary">프로젝트 보기</a>
+              <a href="#skills" class="btn ghost">기술 스택 보기</a>
             </div>
-
-            <ul class="hero-meta" aria-label="핵심 정보">
-              <li>
-                <strong>UMC 10th</strong>
-                <span>Node.js Part</span>
-              </li>
-              <li>
-                <strong>3 Projects</strong>
-                <span>Completed / Ongoing / Planned</span>
-              </li>
-              <li>
-                <strong>Backend</strong>
-                <span>API · DB · Deploy</span>
-              </li>
-            </ul>
           </div>
 
-          <aside class="hero-card" aria-label="프로필 요약">
-            <div class="profile-image">
-              <img src="images/about_me.jpg" alt="이수광 프로필 사진" />
-            </div>
-
-            <div class="hero-card-body">
-              <p class="card-label">Backend Developer</p>
-              <h2>Lee Su-Kwang</h2>
-              <p>
-                문제를 작은 단위로 나누고, 데이터 흐름과 API 구조를 설계하는 과정에 관심이 있습니다.
-              </p>
-            </div>
-          </aside>
+          <ul class="hero-meta reveal">
+            <li>
+              <strong>UMC 10th</strong>
+              <span>Node.js Part</span>
+            </li>
+            <li>
+              <strong>3 Projects</strong>
+              <span>Completed · Ongoing · Planned</span>
+            </li>
+            <li>
+              <strong>Backend</strong>
+              <span>API · DB · Deploy</span>
+            </li>
+          </ul>
         </div>
+
+        <a href="#about" class="scroll-down" aria-label="아래로 이동">
+          <span>Scroll</span>
+        </a>
       </section>
 
       <section id="about" class="section about">
         <div class="section-inner">
-          <div class="section-heading">
+          <div class="section-heading reveal">
             <p class="eyebrow">ABOUT ME</p>
-            <h2>백엔드 개발자로 성장 중인 컴퓨터공학도</h2>
+            <h2>문제를 기능 단위로 나누고, 데이터 흐름을 설계합니다.</h2>
             <p>
-              예전 포트폴리오가 단순 자기소개 중심이었다면, 이제는 프로젝트 경험과 기술 역량을 중심으로 다시 정리했습니다.
+              예전 포트폴리오가 자기소개 중심이었다면, 이제는 Node.js 백엔드 파트 지원에 맞춰
+              프로젝트 경험, 기술 스택, 학습 기록을 중심으로 다시 정리했습니다.
             </p>
           </div>
 
           <div class="about-grid">
-            <article class="intro-card">
-              <h3>이수광</h3>
-              <p class="intro-role">Gachon University · Computer Engineering</p>
+            <article class="profile-card reveal">
+              <h3>Lee Su-Kwang</h3>
+              <p class="profile-role">Gachon University · Computer Engineering</p>
 
               <ul class="info-list">
                 <li>
@@ -123,37 +128,29 @@
               </ul>
             </article>
 
-            <div class="value-grid">
-              <article class="value-card">
-                <span class="value-number">01</span>
+            <div class="value-grid reveal">
+              <article>
+                <span>01</span>
                 <h3>기록하는 개발자</h3>
-                <p>
-                  운영체제, 데이터 통신, 알고리즘 등 전공 학습 내용을 정리하며 개념을 코드와 연결하려고 합니다.
-                </p>
+                <p>운영체제, 데이터 통신, 알고리즘 등 전공 학습 내용을 정리하며 개념을 코드와 연결하려고 합니다.</p>
               </article>
 
-              <article class="value-card">
-                <span class="value-number">02</span>
+              <article>
+                <span>02</span>
                 <h3>구조를 고민하는 개발자</h3>
-                <p>
-                  라우팅, 비즈니스 로직, 데이터베이스 접근 계층을 분리하는 방식에 관심이 있습니다.
-                </p>
+                <p>라우팅, 비즈니스 로직, 데이터베이스 접근 계층을 분리하는 방식에 관심이 있습니다.</p>
               </article>
 
-              <article class="value-card">
-                <span class="value-number">03</span>
+              <article>
+                <span>03</span>
                 <h3>서비스 경험을 쌓는 개발자</h3>
-                <p>
-                  단순 과제 구현을 넘어 실제 사용자가 있는 서비스와 배포 가능한 프로젝트를 만들고자 합니다.
-                </p>
+                <p>단순 과제 구현을 넘어 실제 사용자가 있는 서비스와 배포 가능한 프로젝트를 만들고자 합니다.</p>
               </article>
 
-              <article class="value-card">
-                <span class="value-number">04</span>
+              <article>
+                <span>04</span>
                 <h3>데이터를 활용하는 개발자</h3>
-                <p>
-                  크롤링, API 연동, 데이터 정제와 분석을 서비스 기능으로 연결하는 과정에 관심이 있습니다.
-                </p>
+                <p>크롤링, API 연동, 데이터 정제와 분석을 서비스 기능으로 연결하는 과정에 관심이 있습니다.</p>
               </article>
             </div>
           </div>
@@ -162,7 +159,7 @@
 
       <section id="projects" class="section projects">
         <div class="section-inner">
-          <div class="section-heading">
+          <div class="section-heading reveal">
             <p class="eyebrow">PROJECTS</p>
             <h2>프로젝트 경험</h2>
             <p>
@@ -171,26 +168,26 @@
           </div>
 
           <div class="project-grid">
-            <article class="project-card featured">
+            <article class="project-card featured reveal">
               <div class="project-top">
                 <span class="status done">Completed</span>
-                <span class="project-year">Algorithm Project</span>
+                <span>Algorithm Project</span>
               </div>
 
               <h3>GraphTrip</h3>
-              <p class="project-summary">
+              <p>
                 사용자 행동 데이터와 키워드 기반으로 개인화 여행지를 추천하고,
-                추천 장소를 거리 기준의 여행 코스로 정렬하는 서비스 프로토타입입니다.
+                추천 장소를 거리 기준 여행 코스로 정렬하는 서비스 프로토타입입니다.
               </p>
 
-              <dl class="project-detail">
+              <dl>
                 <div>
                   <dt>담당</dt>
                   <dd>Collaborative Filtering, Jaccard Similarity 기반 추천 후보 생성</dd>
                 </div>
                 <div>
-                  <dt>핵심</dt>
-                  <dd>좋아요 데이터, 키워드 분석, 그래프 추천, 경로 최적화 파이프라인</dd>
+                  <dt>핵심 흐름</dt>
+                  <dd>좋아요 데이터 → 키워드 분석 → 그래프 추천 → 경로 최적화</dd>
                 </div>
               </dl>
 
@@ -203,26 +200,26 @@
               </ul>
             </article>
 
-            <article class="project-card">
+            <article class="project-card reveal">
               <div class="project-top">
                 <span class="status ongoing">Ongoing</span>
-                <span class="project-year">UMC Hackathon</span>
+                <span>UMC Hackathon</span>
               </div>
 
               <h3>서울 구별 모기지수 측정 및 알림 서비스</h3>
-              <p class="project-summary">
+              <p>
                 날씨 데이터와 지역 정보를 활용해 서울 구별 모기 발생 가능성을 계산하고,
                 사용자에게 위험도를 알려주는 서비스입니다.
               </p>
 
-              <dl class="project-detail">
+              <dl>
                 <div>
                   <dt>담당</dt>
                   <dd>Node.js 백엔드 파트, API 연동 및 서버 로직 구현</dd>
                 </div>
                 <div>
-                  <dt>확장</dt>
-                  <dd>단기예보 API, 지역별 데이터 저장, 알림 기능 연동</dd>
+                  <dt>확장 방향</dt>
+                  <dd>단기예보 API, 지역별 데이터 저장, 사용자 알림 기능 연동</dd>
                 </div>
               </dl>
 
@@ -235,26 +232,26 @@
               </ul>
             </article>
 
-            <article class="project-card">
+            <article class="project-card reveal">
               <div class="project-top">
                 <span class="status planned">Planned</span>
-                <span class="project-year">Personal / Team Project</span>
+                <span>Personal / Team Project</span>
               </div>
 
               <h3>BranchAI</h3>
-              <p class="project-summary">
+              <p>
                 Git이 코드 변경 이력을 관리하듯, 프로젝트 기획 과정의 의사결정과 근거를
                 브랜치 구조로 관리하는 의사결정 버전 관리 플랫폼입니다.
               </p>
 
-              <dl class="project-detail">
+              <dl>
                 <div>
                   <dt>목표</dt>
                   <dd>Decision Tree, Time Travel, Branch Compare 기반 기획 관리</dd>
                 </div>
                 <div>
                   <dt>백엔드 관점</dt>
-                  <dd>프로젝트, 노드, 브랜치, 히스토리 중심의 데이터 모델 설계</dd>
+                  <dd>프로젝트, 노드, 브랜치, 히스토리 중심 데이터 모델 설계</dd>
                 </div>
               </dl>
 
@@ -272,16 +269,16 @@
 
       <section id="skills" class="section skills">
         <div class="section-inner">
-          <div class="section-heading">
+          <div class="section-heading reveal">
             <p class="eyebrow">TECH STACK</p>
             <h2>사용 가능한 언어와 기술</h2>
             <p>
-              현재 바로 활용할 수 있는 기술과, UMC 프로젝트를 통해 더 깊게 익히고 있는 기술을 구분해 정리했습니다.
+              현재 활용 가능한 기술과 UMC 프로젝트를 통해 더 깊게 익히고 있는 기술을 구분해 정리했습니다.
             </p>
           </div>
 
           <div class="skill-grid">
-            <article class="skill-card">
+            <article class="skill-card reveal">
               <h3>Languages</h3>
               <ul>
                 <li>Java</li>
@@ -291,7 +288,7 @@
               </ul>
             </article>
 
-            <article class="skill-card">
+            <article class="skill-card reveal">
               <h3>Backend</h3>
               <ul>
                 <li>Node.js</li>
@@ -301,7 +298,7 @@
               </ul>
             </article>
 
-            <article class="skill-card">
+            <article class="skill-card reveal">
               <h3>Database / ORM</h3>
               <ul>
                 <li>데이터베이스 설계</li>
@@ -311,7 +308,7 @@
               </ul>
             </article>
 
-            <article class="skill-card">
+            <article class="skill-card reveal">
               <h3>Data Handling</h3>
               <ul>
                 <li>웹 크롤링</li>
@@ -321,7 +318,7 @@
               </ul>
             </article>
 
-            <article class="skill-card">
+            <article class="skill-card reveal">
               <h3>Deploy / Tools</h3>
               <ul>
                 <li>AWS 배포</li>
@@ -331,7 +328,7 @@
               </ul>
             </article>
 
-            <article class="skill-card">
+            <article class="skill-card reveal">
               <h3>Working Style</h3>
               <ul>
                 <li>기능 단위 구현</li>
@@ -346,50 +343,40 @@
 
       <section id="learning" class="section learning">
         <div class="section-inner">
-          <div class="section-heading">
+          <div class="section-heading reveal">
             <p class="eyebrow">LEARNING LOG</p>
             <h2>전공 학습과 백엔드 역량 연결</h2>
             <p>
-              수업에서 배운 개념을 단순 암기에서 끝내지 않고, 백엔드 개발에 어떻게 연결되는지 정리하고 있습니다.
+              수업에서 배운 개념을 백엔드 개발에 어떻게 연결할 수 있는지 정리하고 있습니다.
             </p>
           </div>
 
           <div class="learning-grid">
-            <article class="learning-card">
+            <article class="learning-card reveal">
               <h3>Operating System</h3>
               <p>프로세스, 스레드, 동기화, 메모리 구조를 서버 동시성 관점으로 학습</p>
             </article>
 
-            <article class="learning-card">
+            <article class="learning-card reveal">
               <h3>Data Communication</h3>
               <p>TCP/IP, HTTP, 포트, 네트워크 계층을 API 통신 구조와 연결</p>
             </article>
 
-            <article class="learning-card">
+            <article class="learning-card reveal">
               <h3>Algorithm</h3>
               <p>추천, 탐색, 최단 경로 문제를 프로젝트 기능 구현에 적용</p>
             </article>
 
-            <article class="learning-card">
+            <article class="learning-card reveal">
               <h3>Database</h3>
               <p>ERD, 정규화, PK/FK, 쿼리 작성으로 서비스 데이터 모델 설계</p>
-            </article>
-
-            <article class="learning-card">
-              <h3>Web Programming</h3>
-              <p>HTML/CSS부터 서버 라우팅, 요청/응답 흐름까지 웹 구조 학습</p>
-            </article>
-
-            <article class="learning-card">
-              <h3>Backend Practice</h3>
-              <p>로그인, CRUD, API 명세, 배포까지 연결되는 실전형 백엔드 학습</p>
             </article>
           </div>
         </div>
       </section>
 
       <section id="contact" class="section contact">
-        <div class="section-inner contact-panel">
+        <div class="section-inner contact-panel reveal">
           <div>
             <p class="eyebrow">CONTACT</p>
             <h2>함께 성장할 수 있는 백엔드 개발자가 되겠습니다.</h2>
@@ -400,9 +387,8 @@
           </div>
 
           <div class="contact-links">
-            <a class="btn primary" href="mailto:coptony212@gachon.ac.kr">Email 보내기</a>
-            <a class="btn secondary" href="https://github.com/coptony" target="_blank" rel="noopener noreferrer">GitHub 보기</a>
-            <a class="btn secondary" href="https://coptony.github.io" target="_blank" rel="noopener noreferrer">Portfolio 열기</a>
+            <a href="mailto:coptony212@gachon.ac.kr" class="btn primary">Email 보내기</a>
+            <a href="https://github.com/coptony" target="_blank" rel="noopener noreferrer" class="btn ghost">GitHub 보기</a>
           </div>
         </div>
       </section>
