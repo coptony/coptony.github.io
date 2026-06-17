@@ -455,6 +455,16 @@ body.is-scrolled .hero-meta {
 }
 
 /* Common Section */
+.hero,
+.section {
+  scroll-snap-align: start;
+  scroll-snap-stop: normal;
+}
+
+.section {
+  scroll-margin-top: var(--header);
+}
+
 .section {
   padding: 112px 24px;
 }
@@ -984,8 +994,10 @@ body.is-scrolled .hero-meta {
   }
 
   html {
-    scroll-padding-top: 78px;
-  }
+  scroll-behavior: smooth;
+  scroll-padding-top: 96px;
+  scroll-snap-type: y proximity;
+}
 
   .site-header {
     top: 0;

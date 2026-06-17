@@ -7,8 +7,6 @@ const sections = document.querySelectorAll('section[id]');
 const reveals = document.querySelectorAll('.reveal');
 const heroText = document.querySelector('.hero-text');
 
-const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
 const getHeaderHeight = () => {
   if (!header) return 0;
   return header.offsetHeight || 72;
@@ -58,22 +56,21 @@ const setScrollState = () => {
   setActiveNav();
 };
 
-const smoothScrollTo = (targetY, duration = 950) => {
-  if (prefersReducedMotion) {
-    window.scrollTo(0, targetY);
-    return;
-  }
-
+const smoothScrollTo = (targetY, duration = 1100) => {
   const startY = window.scrollY;
   const distance = targetY - startY;
   const startTime = performance.now();
 
-  const easeOutCubic = (t) => 1 - Math.pow(1 - t, 3);
+  const easeInOutCubic = (t) => {
+    return t < 0.5
+      ? 4 * t * t * t
+      : 1 - Math.pow(-2 * t + 2, 3) / 2;
+  };
 
   const animation = (currentTime) => {
     const elapsed = currentTime - startTime;
     const progress = Math.min(elapsed / duration, 1);
-    const easedProgress = easeOutCubic(progress);
+    const easedProgress = easeInOutCubic(progress);
 
     window.scrollTo(0, startY + distance * easedProgress);
 
@@ -105,13 +102,21 @@ hashLinks.forEach((link) => {
 
     body.classList.remove('menu-open');
 
+    navLinks.forEach((navLink) => {
+      navLink.classList.toggle(
+        'active',
+        navLink.getAttribute('href') === targetId
+      );
+    });
+
     const headerHeight = getHeaderHeight();
+
     const targetY =
       targetId === '#top'
         ? 0
         : targetSection.offsetTop - headerHeight + 1;
 
-    smoothScrollTo(targetY, 950);
+    smoothScrollTo(targetY, 1100);
   });
 });
 
